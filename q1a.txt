@@ -1,0 +1,1 @@
+With the y-axis pointing down, increasing the angle does a clockwise rotation. With the y-axis point up, increasing the angle does a counter-clockwise rotation.

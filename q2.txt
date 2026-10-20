@@ -1,0 +1,5 @@
+(a) Top-left triangle: (200, 150), (200, 450), (600, 150). Bottom-right triangle: (200, 450), (600, 450), (600, 150). These orders appear counter-clockwise on screen since the y-axis points down.
+
+(b) Store the 4 corners once in a vertex buffer and draw both triangles with 6 indices [0, 3, 1, 3, 2, 1]. With floats this is 56 bytes vs 48 duplicated, so (a) wins for this quad; with doubles it is 88 vs 96, so the index buffer wins. The index buffer wins whenever the bytes saved by not duplicating shared vertices exceed the 24 bytes of indices, i.e. fatter positions or vertices shared by more triangles.
+
+(c) u = (500 - 200)/400 = 0.75, v = (301 - 150)/300 ~= 0.5033, so the UV coordinates are (0.75, 0.5033).
